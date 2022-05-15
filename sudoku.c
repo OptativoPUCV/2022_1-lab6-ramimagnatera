@@ -93,7 +93,7 @@ List* get_adj_nodes(Node* n){
         while(cont > 0){
           Node * new = copy(n);
           new->sudo[i][j] = cont;
-          if is_valid(n) pushFront(list,new);
+          if (is_valid(n)) pushFront(list,new);
           cont--;
         }
         return list; 
