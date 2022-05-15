@@ -60,6 +60,7 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
+  /*
   List* list=createList();
   int cont = 1;
    
@@ -77,8 +78,9 @@ List* get_adj_nodes(Node* n){
           cont++;
         }
         return list; 
-        
+  */      
   return NULL;
+        
 }
 
 
