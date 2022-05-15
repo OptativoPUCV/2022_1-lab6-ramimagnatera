@@ -64,7 +64,6 @@ int is_valid(Node* n){
     for(c = 0 ; c < 9 ; c++){
       if(columna[n->sudo[c][f]] != 0) return 0;
       if(columna[n->sudo[c][f]] == 0 && n->sudo[c][f] != 0){
-        
         columna[n->sudo[c][f] = 1;
       }
     }
@@ -76,7 +75,7 @@ int is_valid(Node* n){
     printf("aux");
     int matriz[10] = {0};
     for (c = 0; c < 9 ; c++){
-      if (matriz[10][n->sudo[f][c]] != 0) return 0;
+      if (matriz[n->sudo[f][c]] != 0) return 0;
       if(matriz[n->sudo[f][c]] == 0 && n->sudo[f][c] != 0){
       matriz[n->sudo[f][c]]=1;
       }
