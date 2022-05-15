@@ -76,7 +76,7 @@ int is_valid(Node* n){
       matriz[n->sudo[f][c]]=1;
   }    
   */
-  return 1;
+  return 0;
 }
 
 
