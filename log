@@ -592,3 +592,22 @@ sudoku.c:74:9: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 021fb42
+Sun May 15 19:36:09 UTC 2022: 
+ sudoku.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:67:34: error: expected ‘]’ before ‘;’ token
+         columna[n->sudo[c][f] = 1;
+                                  ^
+sudoku.c:67:16: error: value computed is not used [-Werror=unused-value]
+         columna[n->sudo[c][f] = 1;
+         ~~~~~~~^~~~~~~~~~~~~~~~~~~
+       }
+       ~         
+sudoku.c:68:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+64135e0
