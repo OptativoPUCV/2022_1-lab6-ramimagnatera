@@ -71,7 +71,7 @@ int is_valid(Node* n){
   
   for (f = 0; f < 9; f++){
     int aux = f,c;
-    printf("aux");
+    printf("%d", aux);
     int matriz[10] = {0};
     for (c = 0; c < 9 ; c++){
       int a = 3*(aux/3) + (c/3);
