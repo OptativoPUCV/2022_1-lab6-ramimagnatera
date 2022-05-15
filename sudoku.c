@@ -64,11 +64,10 @@ int is_valid(Node* n){
     for(c = 0 ; c < 9 ; c++){
       if(columna[n->sudo[c][f]] != 0) return 0;
       if(columna[n->sudo[c][f]] == 0 && n->sudo[c][f] != 0){
-        columna[n->sudo[c][f] = 1;
+        columna[n->sudo[c][f]] = 1;
       }
     }
   }
-  
   
   for (f = 0; f < 9; f++){
     int aux = f,c;
