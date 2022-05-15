@@ -651,3 +651,17 @@ Sun May 15 21:28:30 UTC 2022:
  tests:  7|1
 total_score: 55/70
 f26bf37
+Sun May 15 21:28:53 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:124:15: error: void value not ignored as it ought to be
+     Node* n = pop(st);
+               ^~~
+sudoku.c:135:5: error: value computed is not used [-Werror=unused-value]
+     *cont++;
+     ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fd62864
