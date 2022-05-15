@@ -665,3 +665,13 @@ sudoku.c:135:5: error: value computed is not used [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 fd62864
+Sun May 15 21:29:06 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:124:15: error: void value not ignored as it ought to be
+     Node* n = pop(st);
+               ^~~
+Compilation failed
+fc5ac57

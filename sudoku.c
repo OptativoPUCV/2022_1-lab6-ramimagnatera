@@ -132,7 +132,7 @@ Node* DFS(Node* initial, int* cont){
       aux = next(list);
     }
     
-    *cont++;
+    (*cont)++;
   }
   return NULL;
 }
