@@ -300,3 +300,26 @@ sudoku.c:59:9: error: variable ‘columna’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 7407408
+Sun May 15 18:45:27 UTC 2022: 
+ sudoku.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:64:66: error: expected ‘]’ before ‘)’ token
+       if(columna[n->sudo[c][f] == 0 && columna[n->sudo[c][f] != 0){
+                                                                  ^
+sudoku.c:64:66: error: expected ‘]’ before ‘)’ token
+sudoku.c:65:34: error: expected ‘]’ before ‘;’ token
+         columna[n->sudo[c][f] = 1;
+                                  ^
+sudoku.c:65:16: error: value computed is not used [-Werror=unused-value]
+         columna[n->sudo[c][f] = 1;
+         ~~~~~~~^~~~~~~~~~~~~~~~~~~
+       }
+       ~         
+sudoku.c:66:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+bae5ec2
