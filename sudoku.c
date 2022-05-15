@@ -71,7 +71,6 @@ int is_valid(Node* n){
   
   for (f = 0; f < 9; f++){
     int aux = f;
-    printf("%d", aux);
     int matriz[10] = {0};
     for (c = 0; c < 9 ; c++){
       int a = 3*(aux/3) + (c/3);
@@ -94,7 +93,7 @@ List* get_adj_nodes(Node* n){
         while(cont > 0){
           Node * new = copy(n);
           new->sudo[i][j] = cont;
-          pushFront(list,new);
+          if is_valid(n) pushFront(list,new);
           cont--;
         }
         return list; 
@@ -136,7 +135,6 @@ Node* DFS(Node* initial, int* cont){
     *cont++;
   }*/
   return NULL;
-  
 }
 
 
