@@ -77,7 +77,7 @@ int is_valid(Node* n){
     int matriz[10] = {0};
     for (c = 0; c < 9 ; c++){
       if (matriz[10][n->sudo[f][c]] != 0) return 0;
-      if(validMatrix[n->sudo[f][c]] == 0 && n->sudo[f][c] != 0){
+      if(matriz[n->sudo[f][c]] == 0 && n->sudo[f][c] != 0){
       matriz[n->sudo[f][c]]=1;
       }
     }
