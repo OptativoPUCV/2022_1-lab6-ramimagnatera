@@ -4,7 +4,7 @@
 
 
 typedef struct{
-   int sudo[9][9];
+  int sudo[9][9];
 }Node;
 
 Node* createNode(){
@@ -44,23 +44,76 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+  /*
+  int fila[10] = 0;
+  int columna[10] = 0;
+  int matriz[10] = 0;
+  //filas
+  for(int f = 0 ; f < 9 ; f++){
+    for(int c = 0 ; c < 9 ; c++){
+      if(fila[n->sudo[f][c]]) return 0;
+    }
+  }
+  */
+  return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+  List* list=createList();
+  int cont = 1;
+   
+  for(int i = 0 ; i < 9 ; i++){
+    for(int j = 0 ; j < 9 ; j++){
+      if (n->sudo[i][j] == 0){
+        while(cont < 10){
+          Node * new = copy(n);
+          new->sudo[i][j] = cont;
+          if(cont == 1){
+            pushFront(list,new);
+          }else{
+            pushCurrent(list,new);
+          }
+          cont++;
+        }
+        return list; 
+        
+  return NULL;
 }
 
 
 int is_final(Node* n){
-    return 0;
+    for(int i = 0 ; i < 9 ; i++){
+      for(int j = 0 ; j < 9 ; j++){
+        if (n->sudo[i][j] == 0){
+          return 0;
+        }
+      }
+    }
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
+  /*
+  Stack* st = createStack();
+  push(st, initial);
+
+  while(get_size(st) != 0){
+    Node* n = pop(st);
+    if(is_final(n)) return n;
+    
+    List* list = get_adj_nodes(n);
+    Node* aux = first(list);
+    
+    while(aux != NULL){
+      push(st,aux);
+      aux = next(list);
+    }
+    
+    *cont++;
+  }*/
   return NULL;
+  
 }
 
 
