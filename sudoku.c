@@ -69,7 +69,7 @@ List* get_adj_nodes(Node* n){
           Node * new = copy(n);
           new->sudo[i][j] = cont;
           pushFront(list,new);
-          cont++;
+          cont--;
         }
         return list; 
       }
