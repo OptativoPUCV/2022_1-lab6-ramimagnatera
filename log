@@ -272,3 +272,31 @@ sudoku.c:59:9: error: variable ‘columna’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 14dc8dd
+Sun May 15 18:45:02 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:58:7: error: ‘f’ undeclared (first use in this function)
+   for(f = 0 ; f < 9 ; f++){
+       ^
+sudoku.c:58:7: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:60:9: error: ‘c’ undeclared (first use in this function)
+     for(c = 0 ; c < 9 ; c++){
+         ^
+sudoku.c:62:66: error: expected ‘]’ before ‘)’ token
+       if(columna[n->sudo[c][f] == 0 && columna[n->sudo[c][f] != 0){
+                                                                  ^
+sudoku.c:62:66: error: expected ‘]’ before ‘)’ token
+sudoku.c:63:34: error: expected ‘]’ before ‘;’ token
+         columna[n->sudo[c][f] = 1;
+                                  ^
+sudoku.c:64:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+sudoku.c:59:9: error: variable ‘columna’ set but not used [-Werror=unused-but-set-variable]
+     int columna[10] = {0};
+         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7407408
