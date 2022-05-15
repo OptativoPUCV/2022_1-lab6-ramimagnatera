@@ -513,3 +513,35 @@ sudoku.c:66:7: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 d8b964e
+Sun May 15 19:32:54 UTC 2022: 
+ sudoku.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:68:34: error: expected ‘]’ before ‘;’ token
+         columna[n->sudo[c][f] = 1;
+                                  ^
+sudoku.c:68:16: error: value computed is not used [-Werror=unused-value]
+         columna[n->sudo[c][f] = 1;
+         ~~~~~~~^~~~~~~~~~~~~~~~~~~
+       }
+       ~         
+sudoku.c:69:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+sudoku.c:79:21: error: subscripted value is neither array nor pointer nor vector
+       if (matriz[10][n->sudo[f][c]] != 0) return 0;
+                     ^
+sudoku.c:80:10: error: ‘validMatrix’ undeclared (first use in this function)
+       if(validMatrix[n->sudo[f][c]] == 0 && n->sudo[f][c] != 0){
+          ^~~~~~~~~~~
+sudoku.c:80:10: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:77:9: error: variable ‘matriz’ set but not used [-Werror=unused-but-set-variable]
+     int matriz[10] = {0};
+         ^~~~~~
+sudoku.c:75:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+     int aux = f,c;
+         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+605854a
