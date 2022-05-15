@@ -50,7 +50,7 @@ int is_valid(Node* n){
   for(f = 0 ; f < 9 ; f++){
     int fila[10] = {0};
     for(c = 0 ; c < 9 ; c++){
-      if(fila[n->sudo[f][c]] != 0) return 0;
+      if(fila[n->sudo[f][c]]) return 0;
       if(fila[n->sudo[f][c]] == 0 && fila[n->sudo[f][c]] != 0){
         fila[n->sudo[f][c]] = 1;
       }
