@@ -60,7 +60,6 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-  /*
   List* list=createList();
   int cont = 1;
    
@@ -70,15 +69,11 @@ List* get_adj_nodes(Node* n){
         while(cont < 10){
           Node * new = copy(n);
           new->sudo[i][j] = cont;
-          if(cont == 1){
             pushFront(list,new);
-          }else{
-            pushCurrent(list,new);
-          }
           cont++;
         }
         return list; 
-  */      
+        
   return NULL;
         
 }
