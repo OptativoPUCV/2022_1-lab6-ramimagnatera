@@ -64,9 +64,8 @@ int is_valid(Node* n){
       }
     }
   }
-  int matriz[10] = 0;
+  //int matriz[10] = 0;
 
-  
   return 1;
 }
 
