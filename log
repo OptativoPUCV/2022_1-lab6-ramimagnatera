@@ -437,3 +437,22 @@ sudoku.c:66:7: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 f9d8867
+Sun May 15 18:53:13 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:65:34: error: expected ‘]’ before ‘;’ token
+         columna[n->sudo[c][f] = 1;
+                                  ^
+sudoku.c:65:16: error: value computed is not used [-Werror=unused-value]
+         columna[n->sudo[c][f] = 1;
+         ~~~~~~~^~~~~~~~~~~~~~~~~~~
+       }
+       ~         
+sudoku.c:66:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+ec7cad7
